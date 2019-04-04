@@ -1,6 +1,6 @@
 function logout() {
     localStorage.clear();
-    navigate("C:\Users\rober\Documents\Qien\Eclipse Workspace\testJan/logout");
+    navigate("C:/Users/rober/Documents/Qien/Eclipse Workspace/testJan/index.html");
 }
 function navigate(url) {
     location.href = url;
