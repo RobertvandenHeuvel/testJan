@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="trein.js"></script>
+</head>
+
+<body>
+    <div style="text-align: center; width: 100%">
+        <button disabled="disabled" onclick="navigate('C:/Users/rober/Documents/Qien/Eclipse Workspace/testJan/trein.html')" >Trein Menu</button>
+        <button onclick="navigate('C:/Users/rober/Documents/Qien/Eclipse Workspace/testJan/users.html')">User Menu</button>
+        <br/>
+        <h1 style="color: darkred">TREIN MENU</h1>
+    </div>
+    <hr/>
+    Welkom <b>[[${#httpServletRequest.remoteUser}]]</b>
+    <button onclick="logout()">Logout</button>
+    <hr>
+    RESULT SERVER: <div id=demo></div>
+    <hr>
+    TREIN:
+    api: <input type=text id="apiUrl" value="api/trein" disabled="disabled"/><hr />
+    treinMerk:<input type="text" id="treinMerk"/><br />
+    <button onclick="treinVersturen()">Verstuur</button>
+    <button onclick="getData(document.getElementById('apiUrl').value)">getData 'all treinen'</button>
+</body>
+
+
+</html>

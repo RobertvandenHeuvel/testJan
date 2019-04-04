@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="users.js"></script>
+</head>
+
+<body onload="init()">
+    
+</body>
+<div style="text-align: center; width: 100%">
+    <button onclick="navigate('/trein')">Trein Menu</button>
+    <button disabled="disabled">User Menu</button>
+    <br/>
+    <h1 style="color: darkred">USERS MENU</h1>
+</div>
+<hr/>
+Welkom <b>[[${#httpServletRequest.remoteUser}]]</b>
+<button onclick="logout()">Logout</button>
+<hr>
+RESULT SERVER: <div id=demo></div>
+<hr>
+USERS:
+api: <input type=text id="apiUrl" value="api/user/all" disabled="disabled"/>  |
+username:<input type=text id="username" /> <hr/>
+<button onclick="getAllUsers()">GET 'All Users'</button>
+<button onclick="isUserExist()">GET 'User Exists'</button>
+<button onclick="getSingleUser()">GET 'Single User By Username'</button>
+<button onclick="deleteUser()">DELETE 'Delete User'</button>
+
+</html>
